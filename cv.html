@@ -1,101 +1,160 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>السيرة الذاتية — أحمد عليوي</title>
+  <title>Ahmad Eliwi — CV</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/cv.css">
 </head>
 <body>
   <div class="top">
-    <a href="index.html">العودة إلى الموقع</a>
-    <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-      <a class="solid" href="assets/cv/Ahmad-Eliwi-CV.pdf" download>تنزيل PDF</a>
-      <a href="#" onclick="window.print(); return false;">طباعة</a>
+    <a href="index.html">Back to the site</a>
+    <div class="top-actions">
+      <a class="solid" href="assets/cv/Ahmad-Eliwi-CV.pdf" download>Download PDF</a>
+      <a href="#" onclick="window.print(); return false;">Print</a>
     </div>
   </div>
 
   <article class="sheet">
-    <header class="who">
+    <header class="head">
       <div>
-        <h1>أحمد عليوي</h1>
-        <p class="en-name">Ahmad Eliwi</p>
-        <p class="role">مهندس برمجيات · Software Engineer</p>
+        <p class="kicker">Software Engineer</p>
+        <h1>Ahmad Eliwi</h1>
+        <p class="ar-name" dir="rtl">أحمد عليوي</p>
+        <p class="degree">Damascus University · Software Engineering</p>
       </div>
+      <ul class="contact">
+        <li><a href="mailto:ahmadadd619@gmail.com">ahmadadd619@gmail.com</a></li>
+        <li><a href="tel:+963943893722">+963 943 893 722</a></li>
+        <li><a href="https://github.com/Eliwi234">github.com/Eliwi234</a></li>
+        <li><a href="https://eliwi234.github.io/My-portfolio/">eliwi234.github.io/My-portfolio</a></li>
+        <li>Damascus, Syria</li>
+      </ul>
     </header>
-    <ul class="contacts">
-      <li>دمشق، سوريا</li>
-      <li><a href="mailto:ahmadadd619@gmail.com">ahmadadd619@gmail.com</a></li>
-      <li class="ltr"><a href="tel:+963943893722">+963 943 893 722</a></li>
-      <li><a href="https://github.com/Eliwi234">github.com/Eliwi234</a></li>
-      <li>جامعة دمشق</li>
-    </ul>
-    <div class="rule"></div>
 
-    <h2>نبذة · Profile</h2>
-    <div class="cols">
-      <p>مهندس برمجيات خريج جامعة دمشق. يبني منتجات ويب كاملة، من واجهات عربية إلى خوادم Laravel و FastAPI، إضافة إلى نظام استرجاع معلومات يقيس جودة البحث ولا يكتفي بعرض النتائج.</p>
-      <p class="en">Software engineer and a graduate of Damascus University. He builds complete web products, from Arabic interfaces to Laravel and FastAPI servers, plus an information-retrieval system that measures search quality instead of only listing hits.</p>
-    </div>
-
-    <h2>أعمال مختارة · Selected work</h2>
-
-    <section class="item">
-      <h3>KitchenX</h3>
-      <p class="meta">2026 · React, TypeScript, Tailwind · <a href="https://kitchenx.vercel.app">kitchenx.vercel.app</a></p>
-      <p>منصة للطهاة المنزليين: وجبات، طلبات، سائقون، كوبونات، تسويات، تقارير، وإشعارات لحظية بواجهة عربية وإنجليزية.</p>
+    <section class="profile">
+      <h2>Profile</h2>
+      <p>I am a software engineer and a graduate of Damascus University. I build the product from the screen through to the data: Arabic and English interfaces, Laravel and FastAPI services, and a search system I tested with real ranking measures. I am looking for a software engineering role with a team in Dubai.</p>
+      <p class="ar-line" dir="rtl">مهندس برمجيات من جامعة دمشق. أبني المنتج من الواجهة حتى البيانات، وأبحث عن دور في دبي.</p>
     </section>
 
-    <section class="item">
-      <h3>نظام استرجاع المعلومات · Information Retrieval</h3>
-      <p class="meta">2026 · Python, FastAPI, Streamlit · <a href="https://github.com/Eliwi234/IR_project">GitHub</a></p>
-      <p>BM25 وTF-IDF وSentence-BERT، دمج RRF، تقييم MAP وnDCG، وتوليد إجابة من المستندات المسترجعة.</p>
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <article>
+          <h3>Interfaces</h3>
+          <p>HTML, CSS, JavaScript, TypeScript, React, Vite, Tailwind</p>
+        </article>
+        <article>
+          <h3>Servers</h3>
+          <p>PHP, Laravel, REST, Python, FastAPI</p>
+        </article>
+        <article>
+          <h3>Search and data</h3>
+          <p>BM25, TF-IDF, SBERT, SQLite, Streamlit</p>
+        </article>
+        <article>
+          <h3>Systems</h3>
+          <p>Java, ANTLR, Git, GitHub</p>
+        </article>
+      </div>
     </section>
 
-    <section class="item">
-      <h3>منهج بايثون المتكامل</h3>
-      <p class="meta">2026 · <a href="https://python-roadmap-zeta.vercel.app">Live</a></p>
-      <p>منهج عربي للمعاهد التقنية بأربعة مستويات، من أساسيات اللغة إلى مواضيع أوسع، مع فهرس دروس واضح.</p>
+    <section class="work">
+      <h2>Selected work</h2>
+
+      <article class="project">
+        <span class="num">01</span>
+        <div>
+          <h3>KitchenX <span>2026</span></h3>
+          <p class="meta">React · TypeScript · Tailwind · <a href="https://kitchenx.vercel.app">kitchenx.vercel.app</a></p>
+          <p>I built KitchenX for home chefs who sell their cooking. The desk covers the working day: chefs, meals, categories, orders, drivers, customers, coupons, settlements, and reports. I connected realtime notifications, and I shipped the interface in both Arabic and English, with forms checked before they are sent.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <span class="num">02</span>
+        <div>
+          <h3>Information Retrieval System <span>2026</span></h3>
+          <p class="meta">Python · FastAPI · Streamlit · <a href="https://github.com/Eliwi234/IR_project">GitHub</a></p>
+          <p>I built a search system as separate services, and I ran it on CORD-19 and MS MARCO. It indexes documents, finds them with TF-IDF, BM25, and Sentence-BERT, then merges those lists. I measured the ranking with MAP, nDCG, and precision, and I added a step that answers from the documents it actually retrieved.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <span class="num">03</span>
+        <div>
+          <h3>Integrated Python Curriculum <span>2026</span></h3>
+          <p class="meta">HTML · CSS · JavaScript · <a href="https://python-roadmap-zeta.vercel.app">Live site</a></p>
+          <p>I designed an Arabic curriculum for technical institutes, from zero toward practice, in four levels. A student can move through a clear lesson index. The first level is the environment, variables, conditions, loops, and collections. Later levels build on that.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <span class="num">04</span>
+        <div>
+          <h3>Python Adventure <span>2026</span></h3>
+          <p class="meta">React · Vite · Tailwind · <a href="https://python1-course-mu.vercel.app">Live site</a></p>
+          <p>I made a first step into Python for a beginner. The learner enters by name, then takes short missions. The first mission asks for the line that makes the computer say hello. Sessions, files, and a progress trail sit next to the lesson.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <span class="num">05</span>
+        <div>
+          <h3>Advanced Banking System <span>2025</span></h3>
+          <p class="meta">React · Laravel · <a href="https://github.com/Eliwi234/Advanced-Bancking-System">Interface</a> · <a href="https://github.com/Eliwi234/Advanced-Bancking-System-Backend">Server</a></p>
+          <p>I built both sides. The server holds accounts, transactions, scheduled transfers, approvals, reports, and support tickets. The interface covers sign-in, password reset, users, approvals, and the same reports.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <span class="num">06</span>
+        <div>
+          <h3>Complaints System <span>2025</span></h3>
+          <p class="meta">React · Laravel · <a href="https://github.com/Eliwi234/Compalint-System">Interface</a> · <a href="https://github.com/Eliwi234/Compalint-System-backend">Server</a></p>
+          <p>I built a path for a complaint to move between administration, the agency, and the employee. Each case has a type, a department, and attachments, and I kept a history of what changed at every step.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <span class="num">07</span>
+        <div>
+          <h3>Compiler Front End <span>2025</span></h3>
+          <p class="meta">Java · ANTLR · <a href="https://github.com/Eliwi234/ProjectCompiler2">GitHub</a></p>
+          <p>I wrote the front of a compiler for an Angular-shaped grammar. It reads the source, builds a parse tree and a symbol table, then walks that tree and reports semantic errors on test files.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <span class="num">08</span>
+        <div>
+          <h3>HyperWifi <span>2026</span></h3>
+          <p class="meta">HTML · CSS · JavaScript · <a href="https://github.com/Eliwi234/HyperWifi">GitHub</a></p>
+          <p>I built an Arabic page for requesting an internet subscription. It asks for the place, the number of floors, and the speed package, points out anything missing, and sends the request as a formatted WhatsApp message.</p>
+        </div>
+      </article>
     </section>
 
-    <section class="item">
-      <h3>Python Adventure</h3>
-      <p class="meta">2026 · React · <a href="https://python1-course-mu.vercel.app">Live</a></p>
-      <p>تعلّم تفاعلي من الصفر: مهمات قصيرة، جلسات، ونسبة تقدّم.</p>
-    </section>
-
-    <section class="item">
-      <h3>نظام مصرفي · Banking</h3>
-      <p class="meta">2025 · React + Laravel</p>
-      <p>حسابات، حركات، تحويلات مجدولة، موافقات، تقارير، وتذاكر دعم.</p>
-    </section>
-
-    <section class="item">
-      <h3>نظام الشكاوى · Complaints</h3>
-      <p class="meta">2025 · React + Laravel</p>
-      <p>مسار بين الإدارة والوكالة والموظف، مع الأنواع والأقسام والمرفقات وسجل المعالجة.</p>
-    </section>
-
-    <section class="item">
-      <h3>واجهة مترجم · Compiler front end</h3>
-      <p class="meta">2025 · Java, ANTLR</p>
-      <p>تحليل معجمي ونحوي، شجرة بناء مجردة، جدول رموز، وفحص دلالي.</p>
-    </section>
-
-    <h2>مهارات · Skills</h2>
-    <ul class="tags">
-      <li>React</li><li>TypeScript</li><li>JavaScript</li><li>HTML / CSS</li>
-      <li>Tailwind</li><li>PHP</li><li>Laravel</li><li>Python</li>
-      <li>FastAPI</li><li>BM25</li><li>Sentence-BERT</li><li>SQLite</li>
-      <li>Java</li><li>ANTLR</li><li>Git</li>
-    </ul>
-
-    <h2>دراسة · Education</h2>
-    <section class="item">
-      <h3>جامعة دمشق · Damascus University</h3>
-      <p class="meta">هندسة البرمجيات · Software Engineering</p>
+    <section class="facts">
+      <article>
+        <h2>Education</h2>
+        <p class="strong">Damascus University</p>
+        <p>Software Engineering</p>
+        <p class="muted">Damascus, Syria</p>
+      </article>
+      <article>
+        <h2>Languages</h2>
+        <p><b>Arabic</b> — native</p>
+        <p><b>English</b> — technical and product work</p>
+      </article>
+      <article>
+        <h2>Looking for</h2>
+        <p>A software engineering role on a product team in Dubai.</p>
+        <p class="muted">Interface, API, and data, in one pair of hands.</p>
+      </article>
     </section>
   </article>
 </body>
