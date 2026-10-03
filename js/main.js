@@ -92,7 +92,19 @@
         <h3>${esc(active.name)}</h3>
         <p class="company-role">${esc(textOf(active.role))}</p>
         <ul class="points">${active.points[lang].map((point) => `<li>${esc(point)}</li>`).join("")}</ul>
+        <div class="company-steps">
+          <button type="button" class="btn ghost small" data-step="-1">${esc(t("companies.prev"))}</button>
+          <button type="button" class="btn small" data-step="1">${esc(t("companies.next"))}</button>
+        </div>
       </div>`;
+
+    $$("[data-step]", board).forEach((button) => {
+      button.addEventListener("click", () => {
+        const step = Number(button.dataset.step);
+        const next = (index + step + data.companies.length) % data.companies.length;
+        selectCompany(data.companies[next].id);
+      });
+    });
 
     const buttons = $$("[data-company]", board);
     buttons.forEach((button) => {
@@ -226,9 +238,12 @@
       return;
     }
 
+    let opened = false;
     list.innerHTML = data.projects
       .map((project, index) => {
         const hidden = filter !== "all" && project.kind !== filter;
+        const startOpen = !hidden && !opened;
+        if (startOpen) opened = true;
         const number = String(index + 1).padStart(2, "0");
         const links = project.links
           .map(
@@ -239,23 +254,46 @@
         const points = project.points[lang].map((point) => `<li>${esc(point)}</li>`).join("");
         const stack = project.stack.map((item) => `<li>${esc(item)}</li>`).join("");
         return `
-          <article class="project" data-kind="${esc(project.kind)}" ${hidden ? "hidden" : ""}>
-            <div class="project-copy">
-              <p class="project-kicker">
-                <span>${number}</span>
-                <span>${esc(t("kind." + project.kind))}</span>
-                <span>${esc(t("project.updated"))} ${esc(project.year)}</span>
-              </p>
-              <h3>${esc(textOf(project.title))}</h3>
-              <p>${esc(project.summary[lang])}</p>
-              <ul class="points">${points}</ul>
-              <ul class="stack">${stack}</ul>
-              <div class="project-links">${links}</div>
+          <article class="project${startOpen ? " is-open" : ""}" data-kind="${esc(project.kind)}" ${hidden ? "hidden" : ""}>
+            <button class="project-toggle" type="button" aria-expanded="${startOpen}">
+              <span class="project-num">${number}</span>
+              <span class="project-title-wrap">
+                <span class="project-kicker">
+                  <span>${esc(t("kind." + project.kind))}</span>
+                  <span>${esc(t("project.updated"))} ${esc(project.year)}</span>
+                </span>
+                <h3>${esc(textOf(project.title))}</h3>
+                <p>${esc(project.summary[lang])}</p>
+              </span>
+              <span class="project-arrow" aria-hidden="true"></span>
+              <span class="sr">${esc(t("project.more"))}</span>
+            </button>
+            <div class="project-detail" ${startOpen ? "" : "hidden"}>
+              <div class="project-copy">
+                <ul class="points">${points}</ul>
+                <ul class="stack">${stack}</ul>
+                <div class="project-links">${links}</div>
+              </div>
+              <div class="stage" aria-hidden="true">${stage(project.visual)}</div>
             </div>
-            <div class="stage" aria-hidden="true">${stage(project.visual)}</div>
           </article>`;
       })
       .join("");
+
+    $$(".project-toggle", list).forEach((button) => {
+      button.addEventListener("click", () => {
+        const article = button.closest(".project");
+        const willOpen = !article.classList.contains("is-open");
+        $$(".project", list).forEach((item) => {
+          const toggle = $(".project-toggle", item);
+          const detail = $(".project-detail", item);
+          const open = item === article && willOpen;
+          item.classList.toggle("is-open", open);
+          if (toggle) toggle.setAttribute("aria-expanded", String(open));
+          if (detail) detail.hidden = !open;
+        });
+      });
+    });
   }
 
   function renderSkills() {
@@ -393,6 +431,38 @@
       { rootMargin: "-45% 0px -45% 0px", threshold: 0 }
     );
     watched.forEach((item) => spy.observe(item.section));
+  }
+
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (finePointer && !reduceMotion) {
+    document.documentElement.classList.add("motion");
+    window.addEventListener(
+      "pointermove",
+      (event) => {
+        document.documentElement.style.setProperty("--mx", `${event.clientX}px`);
+        document.documentElement.style.setProperty("--my", `${event.clientY}px`);
+      },
+      { passive: true }
+    );
+  }
+
+  if (!reduceMotion && "IntersectionObserver" in window) {
+    document.documentElement.classList.add("motion");
+    const reveals = $$(".reveal");
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-in");
+          revealObserver.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.12 }
+    );
+    reveals.forEach((section) => revealObserver.observe(section));
+  } else {
+    $$(".reveal").forEach((section) => section.classList.add("is-in"));
   }
 
   applyLanguage();
