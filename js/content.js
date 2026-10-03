@@ -49,6 +49,7 @@ window.PORTFOLIO = {
         "بورتفوليو أحمد عليوي، مهندس برمجيات خريج جامعة دمشق. منتجات ويب، أنظمة Laravel وReact، وتجارب تعليمية عربية، ونظام استرجاع معلومات.",
       "nav.work": "الأعمال",
       "nav.about": "نبذة",
+      "nav.companies": "الشركات",
       "nav.skills": "المهارات",
       "nav.contact": "تواصل",
       "nav.cv": "السيرة",
@@ -57,6 +58,7 @@ window.PORTFOLIO = {
       "hero.lead":
         "أبني منتجات تُستخدم فعلاً: واجهات عربية دقيقة، أنظمة كاملة من الشاشة إلى قاعدة البيانات، ومسارات بحث تفرّق بين الكلمة ومعناها.",
       "hero.primary": "شاهد الأعمال",
+      "hero.companies": "الشركات",
       "hero.secondary": "تواصل معي",
       "hero.cardKicker": "الآن",
       "hero.cardTitle": "أبحث عن عمل أترك فيه أثراً واضحاً في المنتج.",
@@ -77,6 +79,9 @@ window.PORTFOLIO = {
       "about.p3d": "منتج كامل: واجهة، واجهة برمجية، وبيانات",
       "about.p4t": "اللغات",
       "about.p4d": "العربية، والإنجليزية في العمل التقني",
+      "companies.kicker": "الشركات",
+      "companies.title": "أماكن اشتغلت فيها.",
+      "companies.lead": "اختر شركة لتشوف الدور والمهام. التفاصيل نفسها المكتوبة في السيرة.",
       "work.kicker": "الأعمال",
       "work.title": "مشاريع مشروحة، لا لائحة روابط.",
       "work.lead":
@@ -130,6 +135,7 @@ window.PORTFOLIO = {
         "Portfolio of Ahmad Eliwi, a software engineer and Damascus University graduate. Web products, Laravel and React systems, Arabic learning experiences, and an information-retrieval engine.",
       "nav.work": "Work",
       "nav.about": "About",
+      "nav.companies": "Companies",
       "nav.skills": "Skills",
       "nav.contact": "Contact",
       "nav.cv": "CV",
@@ -138,6 +144,7 @@ window.PORTFOLIO = {
       "hero.lead":
         "I build software people actually open: precise Arabic interfaces, systems that run from the screen to the database, and search that can tell a word from its meaning.",
       "hero.primary": "See the work",
+      "hero.companies": "Companies",
       "hero.secondary": "Contact",
       "hero.cardKicker": "Now",
       "hero.cardTitle": "Looking for work where the product can feel the engineering.",
@@ -158,6 +165,9 @@ window.PORTFOLIO = {
       "about.p3d": "Whole products: interface, API, and data",
       "about.p4t": "Languages",
       "about.p4d": "Arabic, and English for technical work",
+      "companies.kicker": "Companies",
+      "companies.title": "Places I have worked.",
+      "companies.lead": "Choose a company to read the role. The details match the CV.",
       "work.kicker": "Selected work",
       "work.title": "Projects with a description, not a link dump.",
       "work.lead": "Each card says what it does, what it is built with, and where to open it.",
@@ -205,6 +215,81 @@ window.PORTFOLIO = {
       "empty": "Nothing in this filter.",
     },
   },
+
+  companies: [
+    {
+      id: "hyper",
+      name: "Hyper Net Company",
+      role: {
+        ar: "قسم الفحص (واي فاي خارجي) وفني تركيب",
+        en: "Checks Department (Wifi Outdoor) & Installation Technician",
+      },
+      points: {
+        ar: [
+          "عملت في قسم الفحص لخدمات الواي فاي الخارجي.",
+          "ركّبت أنظمة الواي فاي الخارجي وصنتها.",
+        ],
+        en: [
+          "Worked in the checks department for Wifi Outdoor services.",
+          "Performed installation and maintenance of Wifi Outdoor systems.",
+        ],
+      },
+    },
+    {
+      id: "minicode",
+      name: "Minicodeleader Platform",
+      role: {
+        ar: "مدرّس لغات البرمجة وأطر العمل",
+        en: "Programming Languages and Frameworks Instructor",
+      },
+      points: {
+        ar: ["أدرّس الطلاب لغات برمجة وأطر عمل، منها React وFlutter."],
+        en: [
+          "Instructing students in various programming languages and frameworks including React and Flutter.",
+        ],
+      },
+    },
+    {
+      id: "english-online",
+      name: "Online English School",
+      role: {
+        ar: "مدرّس لغة إنجليزية",
+        en: "English Language Instructor",
+      },
+      points: {
+        ar: ["أدرّس اللغة الإنجليزية للطلاب عبر منصة على الإنترنت."],
+        en: ["Teaching English language to students through an online platform."],
+      },
+    },
+    {
+      id: "klibbadr",
+      name: "Klibbadr School",
+      role: {
+        ar: "معلم لغة إنجليزية",
+        en: "English Teacher",
+      },
+      points: {
+        ar: ["درّست اللغة الإنجليزية للطلاب، وطوّرت مهارات التواصل والتنظيم."],
+        en: [
+          "Taught English language to students, developing strong communication and organizational skills.",
+        ],
+      },
+    },
+    {
+      id: "abnaa",
+      name: "Abnaa Algolan Team",
+      role: {
+        ar: "متطوّع",
+        en: "Volunteer",
+      },
+      points: {
+        ar: ["ساهمت في مبادرات مجتمعية، بعمل جماعي وقيادة والتزام."],
+        en: [
+          "Contributed to community initiatives, demonstrating teamwork, leadership, and commitment.",
+        ],
+      },
+    },
+  ],
 
   projects: [
     {

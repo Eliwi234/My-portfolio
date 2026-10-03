@@ -3,6 +3,7 @@
   const stored = localStorage.getItem("eliwi-lang");
   let lang = stored === "en" || stored === "ar" ? stored : "ar";
   let filter = "all";
+  let companyId = "hyper";
 
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
@@ -58,6 +59,67 @@
 
     renderProjects();
     renderSkills();
+    renderCompanies();
+  }
+
+  function renderCompanies() {
+    const board = $("#company-board");
+    if (!board || !data.companies) return;
+    if (!data.companies.some((company) => company.id === companyId)) {
+      companyId = data.companies[0].id;
+    }
+    const active = data.companies.find((company) => company.id === companyId);
+    const index = data.companies.findIndex((company) => company.id === companyId);
+
+    board.innerHTML = `
+      <div class="company-rail" role="tablist" aria-label="${esc(t("companies.kicker"))}">
+        ${data.companies
+          .map(
+            (company, itemIndex) => `
+          <button type="button" class="company-tab" role="tab" id="company-tab-${esc(company.id)}"
+            aria-selected="${company.id === companyId}" aria-controls="company-panel" data-company="${esc(company.id)}">
+            <span class="company-index">${String(itemIndex + 1).padStart(2, "0")}</span>
+            <span>
+              <strong>${esc(company.name)}</strong>
+              <em>${esc(textOf(company.role))}</em>
+            </span>
+          </button>`
+          )
+          .join("")}
+      </div>
+      <div class="company-panel" id="company-panel" role="tabpanel" tabindex="0" aria-labelledby="company-tab-${esc(active.id)}">
+        <p class="company-count">${String(index + 1).padStart(2, "0")} / ${String(data.companies.length).padStart(2, "0")}</p>
+        <h3>${esc(active.name)}</h3>
+        <p class="company-role">${esc(textOf(active.role))}</p>
+        <ul class="points">${active.points[lang].map((point) => `<li>${esc(point)}</li>`).join("")}</ul>
+      </div>`;
+
+    const buttons = $$("[data-company]", board);
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => selectCompany(button.dataset.company));
+    });
+
+    const rail = $(".company-rail", board);
+    if (rail) {
+      rail.addEventListener("keydown", (event) => {
+        const current = buttons.findIndex((button) => button.dataset.company === companyId);
+        const forward = event.key === "ArrowDown" || event.key === "ArrowRight";
+        const backward = event.key === "ArrowUp" || event.key === "ArrowLeft";
+        if (!forward && !backward) return;
+        event.preventDefault();
+        const next = (current + (forward ? 1 : -1) + buttons.length) % buttons.length;
+        selectCompany(buttons[next].dataset.company, true);
+      });
+    }
+  }
+
+  function selectCompany(id, focusTab) {
+    companyId = id;
+    renderCompanies();
+    if (focusTab) {
+      const tab = $(`#company-tab-${id}`);
+      if (tab) tab.focus();
+    }
   }
 
   function linkLabel(type) {
@@ -313,6 +375,24 @@
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  const navLinks = $$(".nav-links a");
+  const watched = navLinks
+    .map((link) => ({ link, section: document.getElementById(link.getAttribute("href").slice(1)) }))
+    .filter((item) => item.section);
+  if (watched.length && "IntersectionObserver" in window) {
+    const spy = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const current = watched.find((item) => item.section === entry.target);
+          navLinks.forEach((link) => link.classList.toggle("is-current", link === current.link));
+        });
+      },
+      { rootMargin: "-45% 0px -45% 0px", threshold: 0 }
+    );
+    watched.forEach((item) => spy.observe(item.section));
   }
 
   applyLanguage();
