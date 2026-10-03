@@ -1,0 +1,73 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 3662 >>
+stream
+0.831 0.651 0.337 rg
+0 818 595 24 re f
+0.965 0.945 0.906 rg
+48 790 120 8 re f
+0.100 0.080 0.060 rg BT /F2 26 Tf 1 0 0 1 48 748 Tm (AHMAD ELIWI) Tj ET
+0.550 0.390 0.190 rg BT /F1 12 Tf 1 0 0 1 48 726 Tm (Software Engineer) Tj ET
+0.380 0.340 0.300 rg BT /F1 11 Tf 1 0 0 1 48 708 Tm (Damascus University  ·  Damascus, Syria) Tj ET
+0.100 0.080 0.060 rg BT /F1 10 Tf 1 0 0 1 48 684 Tm (ahmadadd619@gmail.com) Tj ET
+0.100 0.080 0.060 rg BT /F1 10 Tf 1 0 0 1 230 684 Tm (+963 943 893 722) Tj ET
+0.100 0.080 0.060 rg BT /F1 10 Tf 1 0 0 1 380 684 Tm (github.com/Eliwi234) Tj ET
+0.10 0.08 0.06 RG
+48 668 m 547 668 l S
+0.550 0.390 0.190 rg BT /F2 9 Tf 1 0 0 1 48 646 Tm (PROFILE) Tj ET
+0.100 0.080 0.060 rg BT /F1 11 Tf 1 0 0 1 48 626 Tm (Software engineer and a graduate of Damascus University. Builds complete) Tj ET
+0.100 0.080 0.060 rg BT /F1 11 Tf 1 0 0 1 48 610 Tm (web products: Arabic interfaces, Laravel and FastAPI servers, and an) Tj ET
+0.100 0.080 0.060 rg BT /F1 11 Tf 1 0 0 1 48 594 Tm (information-retrieval system that measures ranking quality.) Tj ET
+0.550 0.390 0.190 rg BT /F2 9 Tf 1 0 0 1 48 566 Tm (SELECTED WORK) Tj ET
+0.100 0.080 0.060 rg BT /F2 11 Tf 1 0 0 1 48 544 Tm (KitchenX  ·  2026) Tj ET
+0.380 0.340 0.300 rg BT /F1 10 Tf 1 0 0 1 48 528 Tm (Home-chef platform: meals, orders, drivers, coupons, settlements, reports, realtime notices. React, TypeScript.) Tj ET
+0.100 0.080 0.060 rg BT /F2 11 Tf 1 0 0 1 48 504 Tm (Information Retrieval  ·  2026) Tj ET
+0.380 0.340 0.300 rg BT /F1 10 Tf 1 0 0 1 48 488 Tm (BM25, TF-IDF, Sentence-BERT, rank fusion, MAP and nDCG, answers grounded in retrieved documents. FastAPI, Streamlit.) Tj ET
+0.100 0.080 0.060 rg BT /F2 11 Tf 1 0 0 1 48 464 Tm (Python Curriculum  ·  2026) Tj ET
+0.380 0.340 0.300 rg BT /F1 10 Tf 1 0 0 1 48 448 Tm (Arabic four-level curriculum for technical institutes, from language basics toward broader topics.) Tj ET
+0.100 0.080 0.060 rg BT /F2 11 Tf 1 0 0 1 48 424 Tm (Python Adventure  ·  2026) Tj ET
+0.380 0.340 0.300 rg BT /F1 10 Tf 1 0 0 1 48 408 Tm (Interactive first steps in Python: short missions, sessions, and a progress trail. React.) Tj ET
+0.100 0.080 0.060 rg BT /F2 11 Tf 1 0 0 1 48 384 Tm (Banking System  ·  2025) Tj ET
+0.380 0.340 0.300 rg BT /F1 10 Tf 1 0 0 1 48 368 Tm (Accounts, transactions, scheduled transfers, approvals, reports, support tickets. React and Laravel.) Tj ET
+0.100 0.080 0.060 rg BT /F2 11 Tf 1 0 0 1 48 344 Tm (Complaints System  ·  2025) Tj ET
+0.380 0.340 0.300 rg BT /F1 10 Tf 1 0 0 1 48 328 Tm (Admin, agency, and employee flow with types, departments, attachments, and a handling history.) Tj ET
+0.100 0.080 0.060 rg BT /F2 11 Tf 1 0 0 1 48 304 Tm (Compiler Front End  ·  2025) Tj ET
+0.380 0.340 0.300 rg BT /F1 10 Tf 1 0 0 1 48 288 Tm (Java and ANTLR: lexer, parser, abstract syntax tree, symbol table, semantic checks.) Tj ET
+0.100 0.080 0.060 rg BT /F2 11 Tf 1 0 0 1 48 264 Tm (HyperWifi  ·  2026) Tj ET
+0.380 0.340 0.300 rg BT /F1 10 Tf 1 0 0 1 48 248 Tm (Arabic landing page that collects an internet subscription and hands it to WhatsApp.) Tj ET
+0.550 0.390 0.190 rg BT /F2 9 Tf 1 0 0 1 48 220 Tm (SKILLS) Tj ET
+0.100 0.080 0.060 rg BT /F1 10 Tf 1 0 0 1 48 202 Tm (React, TypeScript, JavaScript, Tailwind, PHP, Laravel, Python, FastAPI,) Tj ET
+0.100 0.080 0.060 rg BT /F1 10 Tf 1 0 0 1 48 188 Tm (BM25, Sentence-BERT, SQLite, Java, ANTLR, Git.) Tj ET
+0.550 0.390 0.190 rg BT /F2 9 Tf 1 0 0 1 48 164 Tm (EDUCATION) Tj ET
+0.100 0.080 0.060 rg BT /F2 11 Tf 1 0 0 1 48 146 Tm (Damascus University - Software Engineering) Tj ET
+0.380 0.340 0.300 rg BT /F1 9 Tf 1 0 0 1 48 46 Tm (Portfolio CV  ·  Ahmad Eliwi  ·  ahmadadd619@gmail.com) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 5 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Annots [<< /Type /Annot /Subtype /Link /Rect [48 678 210 696] /Border [0 0 0] /A << /Type /Action /S /URI /URI (mailto:ahmadadd619@gmail.com) >> >> << /Type /Annot /Subtype /Link /Rect [230 678 360 696] /Border [0 0 0] /A << /Type /Action /S /URI /URI (tel:+963943893722) >> >> << /Type /Annot /Subtype /Link /Rect [380 678 530 696] /Border [0 0 0] /A << /Type /Action /S /URI /URI (https://github.com/Eliwi234) >> >>] >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000260 00000 n 
+0000003974 00000 n 
+trailer<< /Size 7 /Root 1 0 R >>
+startxref
+4530
+%%EOF

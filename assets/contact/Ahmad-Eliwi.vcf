@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N;CHARSET=UTF-8:عليوي;أحمد;;;
+FN;CHARSET=UTF-8:أحمد عليوي
+NICKNAME:Ahmad Eliwi
+TITLE;CHARSET=UTF-8:مهندس برمجيات
+ORG;CHARSET=UTF-8:جامعة دمشق
+TEL;TYPE=CELL:+963943893722
+EMAIL;TYPE=INTERNET:ahmadadd619@gmail.com
+URL:https://github.com/Eliwi234
+ADR;CHARSET=UTF-8:;;دمشق;;;سوريا
+NOTE;CHARSET=UTF-8:Ahmad Eliwi — Software Engineer — Damascus University
+END:VCARD
