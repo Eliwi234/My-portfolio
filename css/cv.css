@@ -106,6 +106,7 @@ h1 {
   text-transform: uppercase;
   color: var(--sage);
 }
+.contact a { direction: ltr; unicode-bidi: isolate; }
 
 h2 {
   margin: 0 0 2.2mm;
@@ -127,12 +128,15 @@ h2 {
   line-height: 1.42;
 }
 
-.body {
+.body { margin-top: 3.6mm; }
+.block { margin-top: 3.4mm; }
+.projects, .split {
   display: grid;
-  grid-template-columns: 1.18fr 0.82fr;
-  gap: 5mm;
-  margin-top: 3.6mm;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.2mm;
+  align-items: start;
 }
+.split { margin-top: 3mm; }
 .jobs { border-left: 0.35mm solid #c5ddd6; margin-left: 1.2mm; }
 .job {
   position: relative;
@@ -175,6 +179,9 @@ aside section { margin-bottom: 3.2mm; }
   break-inside: avoid;
 }
 .card p { margin: 0.5mm 0 0; font-size: 3.05mm; line-height: 1.32; }
+.card ul { margin: 1mm 0 0; padding-left: 3.4mm; }
+.card li { font-size: 3.05mm; line-height: 1.32; }
+.meta { color: var(--sage); font-weight: 600; }
 .note { color: var(--muted); }
 
 .group { margin-bottom: 1.8mm; }
@@ -199,10 +206,10 @@ aside section { margin-bottom: 3.2mm; }
 
 @media (max-width: 720px) {
   .sheet { padding: 1rem; }
-  .head, .body { grid-template-columns: 1fr; }
+  .head, .projects, .split { grid-template-columns: 1fr; }
   .photo { width: 112px; height: 112px; }
   h1 { font-size: 2.3rem; }
-  .role, .about p, .job li, .card p, .position, .contact li { font-size: 0.92rem; }
+  .role, .about p, .job li, .card p, .card li, .position, .contact li { font-size: 0.92rem; }
   h2, .group h3, .contact span { font-size: 0.7rem; }
   .job h3, .card h3 { font-size: 1.02rem; }
   .pills span { font-size: 0.82rem; }
@@ -219,7 +226,7 @@ aside section { margin-bottom: 3.2mm; }
     box-shadow: none;
   }
   .head { grid-template-columns: 30mm 1fr; }
-  .body { grid-template-columns: 1.18fr 0.82fr; }
+  .projects, .split { grid-template-columns: 1fr 1fr; }
 }
 
 @page { size: A4; margin: 9mm 10mm; }
