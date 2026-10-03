@@ -257,6 +257,7 @@
           <article class="project${startOpen ? " is-open" : ""}" data-kind="${esc(project.kind)}" ${hidden ? "hidden" : ""}>
             <button class="project-toggle" type="button" aria-expanded="${startOpen}">
               <span class="project-num">${number}</span>
+              <img class="project-thumb" src="${esc(project.image)}" alt="">
               <span class="project-title-wrap">
                 <span class="project-kicker">
                   <span>${esc(t("kind." + project.kind))}</span>
@@ -274,11 +275,18 @@
                 <ul class="stack">${stack}</ul>
                 <div class="project-links">${links}</div>
               </div>
-              <div class="stage" aria-hidden="true">${stage(project.visual)}</div>
+              <button type="button" class="shot" data-shot="${esc(project.image)}" data-alt="${esc(textOf(project.title))}">
+                <img src="${esc(project.image)}" alt="${esc(textOf(project.title))}">
+                <span>${esc(t("project.zoom"))}</span>
+              </button>
             </div>
           </article>`;
       })
       .join("");
+
+    $$(".shot", list).forEach((button) => {
+      button.addEventListener("click", () => openShot(button.dataset.shot, button.dataset.alt));
+    });
 
     $$(".project-toggle", list).forEach((button) => {
       button.addEventListener("click", () => {
@@ -463,6 +471,29 @@
     reveals.forEach((section) => revealObserver.observe(section));
   } else {
     $$(".reveal").forEach((section) => section.classList.add("is-in"));
+  }
+
+  const lightbox = $("#lightbox");
+  const lightboxImg = $("#lightbox-img");
+  function openShot(src, alt) {
+    if (!lightbox || !lightboxImg) return;
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || "";
+    lightbox.hidden = false;
+  }
+  function closeShot() {
+    if (!lightbox) return;
+    lightbox.hidden = true;
+  }
+  if (lightbox) {
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) closeShot();
+    });
+    const close = $("#lightbox-close");
+    if (close) close.addEventListener("click", closeShot);
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeShot();
+    });
   }
 
   applyLanguage();

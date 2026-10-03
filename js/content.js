@@ -85,6 +85,8 @@ window.PORTFOLIO = {
       "companies.prev": "السابقة",
       "companies.next": "التالية",
       "project.more": "التفاصيل",
+      "project.zoom": "تكبير الصورة",
+      "project.close": "إغلاق",
       "work.kicker": "الأعمال",
       "work.title": "مشاريع مشروحة، لا لائحة روابط.",
       "work.lead":
@@ -174,6 +176,8 @@ window.PORTFOLIO = {
       "companies.prev": "Previous",
       "companies.next": "Next",
       "project.more": "Details",
+      "project.zoom": "Enlarge image",
+      "project.close": "Close",
       "work.kicker": "Selected work",
       "work.title": "Projects with a description, not a link dump.",
       "work.lead": "Each card says what it does, what it is built with, and where to open it.",
@@ -303,6 +307,7 @@ window.PORTFOLIO = {
       kind: "product",
       year: "2026",
       visual: "kitchen",
+      image: "assets/projects/kitchenx.jpg",
       title: "KitchenX",
       summary: {
         ar: "منصة تربط الطهاة المنزليين بعشّاق الطعام، مع لوحة تشغيل تغطي اليوم كاملًا: من الوجبة إلى السائق فالتسوية.",
@@ -333,6 +338,7 @@ window.PORTFOLIO = {
       kind: "system",
       year: "2026",
       visual: "search",
+      image: "assets/projects/ir.jpg",
       title: { ar: "نظام استرجاع المعلومات", en: "Information Retrieval System" },
       summary: {
         ar: "مسار بحث كامل بمعمارية خدمات: فهرسة، ترتيب، تقييم، ثم إجابة مبنية على المستندات. يدعم مجموعات CORD-19 وMS MARCO.",
@@ -360,6 +366,7 @@ window.PORTFOLIO = {
       kind: "learning",
       year: "2026",
       visual: "curriculum",
+      image: "assets/projects/curriculum.jpg",
       title: { ar: "منهج بايثون المتكامل", en: "Integrated Python Curriculum" },
       summary: {
         ar: "موقع منهج عربي للمعاهد التقنية، من الصفر باتجاه العمل: أربعة مستويات، فهرس دروس، ومساحة للتمارين والمشاريع التطبيقية.",
@@ -390,6 +397,7 @@ window.PORTFOLIO = {
       kind: "learning",
       year: "2026",
       visual: "learn",
+      image: "assets/projects/adventure.jpg",
       title: "Python Adventure",
       summary: {
         ar: "بوابة تفاعلية لتعلّم بايثون من الصفر. المهمّة الأولى تطلب سطرًا يجعل الحاسوب يقول مرحبًا، ثم تكمل الجلسات مع نسبة تقدّم.",
@@ -420,6 +428,7 @@ window.PORTFOLIO = {
       kind: "system",
       year: "2025",
       visual: "bank",
+      image: "assets/projects/bank.jpg",
       title: { ar: "نظام مصرفي متقدم", en: "Advanced Banking System" },
       summary: {
         ar: "نظام بحسابات وحركات وموافقات. الواجهة بـ React، والخادم بـ Laravel، مع تقارير ومسار لاستعادة الدخول.",
@@ -450,6 +459,7 @@ window.PORTFOLIO = {
       kind: "system",
       year: "2025",
       visual: "complaint",
+      image: "assets/projects/cases.jpg",
       title: { ar: "نظام الشكاوى", en: "Complaints System" },
       summary: {
         ar: "مسار شكوى بين الإدارة والوكالة والموظف: النوع، القسم، المرفق، وسجل ما تغيّر على الشكوى.",
@@ -480,6 +490,7 @@ window.PORTFOLIO = {
       kind: "system",
       year: "2025",
       visual: "compiler",
+      image: "assets/projects/compiler.jpg",
       title: { ar: "واجهة مترجم", en: "Compiler Front End" },
       summary: {
         ar: "مترجم بلغة جافا لقواعد ببناء Angular: تحليل معجمي ونحوي، شجرة بناء، جدول رموز، ثم تمريرة تُظهر الأخطاء الدلالية.",
@@ -507,6 +518,7 @@ window.PORTFOLIO = {
       kind: "product",
       year: "2026",
       visual: "wifi",
+      image: "assets/projects/wifi.jpg",
       title: "HyperWifi",
       summary: {
         ar: "صفحة هبوط عربية لطلب اشتراك إنترنت: بيانات المكان، عدد الطوابق، وباقة السرعة، ثم تُرسل الرسالة منسّقة عبر واتساب.",
