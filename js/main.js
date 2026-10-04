@@ -60,6 +60,16 @@
     renderProjects();
     renderSkills();
     renderCompanies();
+    paintRole();
+  }
+
+  let roleIndex = 0;
+  function paintRole() {
+    const node = $("#role-rotate");
+    if (!node || !data.person.roles) return;
+    const list = data.person.roles[lang] || [];
+    if (!list.length) return;
+    node.textContent = list[roleIndex % list.length];
   }
 
   function renderCompanies() {
@@ -494,6 +504,13 @@
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") closeShot();
     });
+  }
+
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    window.setInterval(() => {
+      roleIndex += 1;
+      paintRole();
+    }, 2200);
   }
 
   applyLanguage();

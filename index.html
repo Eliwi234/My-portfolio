@@ -13,6 +13,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/theme.css">
   <title>أحمد عليوي — مهندس برمجيات</title>
   <script>
     (function () {
@@ -57,7 +58,8 @@
     </button>
     <div class="nav-panel" id="nav-panel">
       <nav class="nav-links" aria-label="primary">
-        <a href="#about" data-i18n="nav.about">نبذة</a>
+        <a href="#top" data-i18n="nav.home">الرئيسية</a>
+        <a href="#about" data-i18n="nav.about">عني</a>
         <a href="#companies" data-i18n="nav.companies">الشركات</a>
         <a href="#work" data-i18n="nav.work">الأعمال</a>
         <a href="#skills" data-i18n="nav.skills">المهارات</a>
@@ -76,59 +78,60 @@
   </header>
 
   <main id="content">
-    <section class="hero reveal" id="top">
-      <div class="hero-grid">
-        <div>
-          <p class="eyebrow" data-i18n="hero.eyebrow">مهندس برمجيات · جامعة دمشق</p>
-          <h1 class="hero-name" id="hero-name">
-            <span>أحمد</span>
-            <span>عليوي</span>
-          </h1>
-          <p class="hero-alt" id="hero-alt">Ahmad Eliwi</p>
-          <p class="hero-lead" data-i18n="hero.lead"></p>
-          <div class="hero-actions">
-            <a class="btn" href="#work" data-i18n="hero.primary">شاهد الأعمال</a>
-            <a class="btn ghost" href="#companies" data-i18n="hero.companies">الشركات</a>
-            <a class="btn ghost" href="#contact" data-i18n="hero.secondary">تواصل معي</a>
-          </div>
+    <section class="hero" id="top">
+      <div class="hero-bg" style="background-image:url(assets/cv/photo.jpg)"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-center">
+        <div class="hero-social">
+          <a href="https://github.com/Eliwi234" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://wa.me/963943893722" target="_blank" rel="noreferrer">WhatsApp</a>
+          <a href="mailto:ahmadadd619@gmail.com">Email</a>
         </div>
-        <aside class="hero-card">
-          <div class="portrait-frame">
-            <img id="portrait" src="assets/cv/photo.jpg" alt="">
-            <span class="monogram" aria-hidden="true">أع</span>
-          </div>
-          <p class="kicker" data-i18n="hero.cardKicker">الآن</p>
-          <h2 data-i18n="hero.cardTitle"></h2>
-          <p data-i18n="hero.cardBody"></p>
-          <ul class="facts">
-            <li data-i18n="hero.fact1"></li>
-            <li data-i18n="hero.fact2"></li>
-            <li data-i18n="hero.fact3"></li>
-          </ul>
-        </aside>
+        <p class="hero-iam" data-i18n="hero.iam">أنا</p>
+        <h1 class="hero-name" id="hero-name"><span>أحمد عليوي</span></h1>
+        <p class="hero-alt" id="hero-alt">Ahmad Eliwi</p>
+        <p class="role-box" id="role-rotate">مهندس برمجيات</p>
+        <p class="hero-lead" data-i18n="hero.lead"></p>
+        <div class="hero-actions">
+          <a class="btn" href="#work" data-i18n="hero.primary">شوف شغلي</a>
+          <a class="btn ghost" href="assets/cv/Ahmad-Eliwi-CV.pdf" download data-i18n="cv.download">نزّل السيرة</a>
+          <a class="btn ghost" href="#contact" data-i18n="hero.secondary">احكيلي</a>
+        </div>
       </div>
     </section>
 
-    <div class="marquee" aria-hidden="true">
-      <div class="track">
-        <span>React</span><span>TypeScript</span><span>Laravel</span><span>Python</span><span>FastAPI</span><span>Tailwind</span><span>ANTLR</span><span>Streamlit</span>
-        <span>React</span><span>TypeScript</span><span>Laravel</span><span>Python</span><span>FastAPI</span><span>Tailwind</span><span>ANTLR</span><span>Streamlit</span>
+    <section class="section reveal" id="services">
+      <div class="section-head">
+        <p class="kicker" data-i18n="services.kicker">شو بشتغل</p>
+        <h2 data-i18n="services.title">الشغل اللي بقدمه</h2>
       </div>
-    </div>
+      <div class="service-grid">
+        <article><h3 data-i18n="services.s1t"></h3><p data-i18n="services.s1d"></p></article>
+        <article><h3 data-i18n="services.s2t"></h3><p data-i18n="services.s2d"></p></article>
+        <article><h3 data-i18n="services.s3t"></h3><p data-i18n="services.s3d"></p></article>
+        <article><h3 data-i18n="services.s4t"></h3><p data-i18n="services.s4d"></p></article>
+      </div>
+    </section>
 
     <section class="section reveal" id="about">
       <div class="section-head">
-        <p class="kicker" data-i18n="about.kicker">نبذة</p>
+        <p class="kicker" data-i18n="about.kicker">عني</p>
         <h2 data-i18n="about.title"></h2>
       </div>
       <div class="about-grid">
-        <p class="about-body" data-i18n="about.body"></p>
-        <dl class="about-list">
+        <div class="portrait-frame">
+          <img id="portrait" src="assets/cv/photo.jpg" alt="">
+          <span class="monogram" aria-hidden="true">أع</span>
+        </div>
+        <div>
+          <p class="about-body" data-i18n="about.body"></p>
+          <dl class="about-list">
           <div><dt data-i18n="about.p1t"></dt><dd data-i18n="about.p1d"></dd></div>
           <div><dt data-i18n="about.p2t"></dt><dd data-i18n="about.p2d"></dd></div>
           <div><dt data-i18n="about.p3t"></dt><dd data-i18n="about.p3d"></dd></div>
           <div><dt data-i18n="about.p4t"></dt><dd data-i18n="about.p4d"></dd></div>
-        </dl>
+          </dl>
+        </div>
       </div>
     </section>
 
@@ -172,7 +175,6 @@
         <p class="kicker" data-i18n="cv.kicker">السيرة الذاتية</p>
         <h2 data-i18n="cv.title"></h2>
         <p data-i18n="cv.lead"></p>
-        <p class="quiet" data-i18n="cv.note"></p>
       </div>
       <div class="cv-actions">
         <a class="btn" href="assets/cv/Ahmad-Eliwi-CV.pdf" download data-i18n="cv.download">تنزيل السيرة PDF</a>
